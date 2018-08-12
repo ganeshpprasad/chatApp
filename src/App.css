@@ -1,0 +1,107 @@
+.main-con{
+    height: 100vh;
+    width: 100vw;
+    background-color: #f7fffe;
+}
+
+.chat-con{
+    height: 100%;
+}
+
+.chat-view{
+    margin: 0 auto;
+    background-color: rgba(174, 207, 201, 0.5);
+    width: 70vw;
+    height: 90%;
+    padding: 0.5rem;
+}
+
+.hamburger{
+    margin: 1rem;
+    position: absolute;
+    width: 64px;
+    height: 32px;
+    background-color: aquamarine;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger:hover{
+    box-shadow: 0px 1px 3px 0px cyan;
+}
+
+.compose-box{
+    height: 10%;
+    width: 100vw;
+    background-color: white;
+}
+
+.msg-item{
+    min-height: 48px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+.msg-item span:nth-child(2){
+    display: block;
+}
+
+.msg-item + .msg-item{
+    margin-top: 1rem;
+}
+
+.account-con{
+    position: absolute;
+    left: 15%;
+    top: 1px;
+    width: 70vw;
+    background-color: #ede;
+    margin: 0 auto;
+    height: 50%;
+}
+
+.account-con h3{
+    text-align: center;
+}
+
+.form-field-con{
+    width: 50%;
+    margin: 5rem auto;
+}
+
+.form-field{
+    color: #555;
+    margin-right: 5rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.compose-con {
+    height: 10%;;
+}
+
+.compose-area{
+    width: 87%;
+    border: none;
+    height: 60%;
+    font-size: 0.8rem;
+    outline: none;
+    padding: 0.4rem;
+    vertical-align: middle;
+    background-color: #ccc;
+}
+
+.compose-btn{
+    border: none;
+    height: 70%;
+    padding: 0;
+    width: 10%;
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+.compose-btn:hover{
+    box-shadow: 0px 1px 3px 0px cyan;
+}
