@@ -1,107 +1,201 @@
-.main-con{
-    height: 100vh;
-    width: 100vw;
-    background-color: #f7fffe;
+.main-con {
+	height: 100vh;
+	width: 70vw;
+	background-color: #f7fffe;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
 }
 
-.chat-con{
-    height: 100%;
+.app-con {
+	height: 90%;
+	width: 90%;
+	box-sizing: border-box;
+	margin: 0 auto;
 }
 
-.chat-view{
-    margin: 0 auto;
-    background-color: rgba(174, 207, 201, 0.5);
-    width: 70vw;
-    height: 90%;
-    padding: 0.5rem;
+.chat-con {
+	height: 100%;
+	width: 100%;
 }
 
-.hamburger{
-    margin: 1rem;
-    position: absolute;
-    width: 64px;
-    height: 32px;
-    background-color: aquamarine;
-    outline: none;
-    border: none;
-    cursor: pointer;
+.chat-view {
+	margin: 0 auto;
+	background-color: rgba(174, 207, 201, 0.2);
+	height: 89%;
+	padding: 0.5rem;
+	overflow: auto;
 }
 
-.hamburger:hover{
-    box-shadow: 0px 1px 3px 0px cyan;
+.chat-view::-webkit-scrollbar {
+	visibility: hidden;
+	display: none;
 }
 
-.compose-box{
-    height: 10%;
-    width: 100vw;
-    background-color: white;
+.topbar-con {
+	margin: 1rem;
+	display: flex;
 }
 
-.msg-item{
-    min-height: 48px;
-    text-align: center;
-    border: 1px solid #ccc;
-    padding: 1rem;
+.hamburger {
+	display: flex;
+	align-items: center;
+	width: 64px;
+	height: 32px;
+	background-color: aquamarine;
+	outline: none;
+	border: none;
+	cursor: pointer;
 }
 
-.msg-item span:nth-child(2){
-    display: block;
+.hamburger > svg {
+	margin-left: 15px;
 }
 
-.msg-item + .msg-item{
-    margin-top: 1rem;
+.nav-con {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	background-color: aquamarine;
 }
 
-.account-con{
-    position: absolute;
-    left: 15%;
-    top: 1px;
-    width: 70vw;
-    background-color: #ede;
-    margin: 0 auto;
-    height: 50%;
+.nav-con-base {
+	width: 60%;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
 }
 
-.account-con h3{
-    text-align: center;
+.nav-tab {
+	color: #555;
+	text-decoration: none;
 }
 
-.form-field-con{
-    width: 50%;
-    margin: 5rem auto;
+.nav-tab:hover {
+	color: #ff04b9;
 }
 
-.form-field{
-    color: #555;
-    margin-right: 5rem;
-    margin-bottom: 2rem;
-    display: inline-block;
+.compose-box {
+	height: 10%;
+	width: 100vw;
+	background-color: white;
+}
+
+.msg-item {
+	min-height: 48px;
+	border: 1px solid #ccc;
+	padding: 1rem;
+	width: 80%;
+	margin: 1rem auto;
+}
+
+.msg-item .message {
+	margin: 1rem;
+}
+
+.msg-item .user-con {
+	display: flex;
+	align-items: center;
+}
+
+.msg-item .username {
+	font-size: 0.8rem;
+	margin-left: 0.5rem;
+}
+
+.msg-item .msg-actions-con {
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.7rem;
+}
+
+.msg-item .msg-actions-con .msg-actions {
+	display: flex;
+	justify-content: space-around;
+	width: 50%;
+}
+
+.msg-item .avatar {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-color: #a54;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.msg-item span:nth-child(2) {
+	display: block;
+	margin-right: 2rem;
+}
+
+.msg-item + .msg-item {
+	margin-top: 1rem;
+}
+
+.account-con {
+	top: 1px;
+	background-color: #ede;
+	margin: 0 auto;
+	height: 50%;
+}
+
+.account-con h3 {
+	text-align: center;
+}
+
+.form-field-con {
+	width: 50%;
+	margin: 5rem auto;
+}
+
+.form-field {
+	color: #555;
+	margin-right: 5rem;
+	margin-bottom: 2rem;
+	display: inline-block;
 }
 
 .compose-con {
-    height: 10%;;
+	height: 10%;
+	margin-bottom: 1rem;
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
 }
 
-.compose-area{
-    width: 87%;
-    border: none;
-    height: 60%;
-    font-size: 0.8rem;
-    outline: none;
-    padding: 0.4rem;
-    vertical-align: middle;
-    background-color: #ccc;
+.compose-area {
+	width: 100%;
+	border: none;
+	height: 90%;
+	font-size: 0.8rem;
+	outline: none;
+	vertical-align: middle;
+	background-color: rgba(204, 204, 204, 0.2);
+	padding: 0.5rem;
+	box-sizing: border-box;
 }
 
-.compose-btn{
-    border: none;
-    height: 70%;
-    padding: 0;
-    width: 10%;
-    cursor: pointer;
-    background-color: aquamarine;
+.compose-btn {
+	border: none;
+	height: 100%;
+	padding: 0;
+	width: 15%;
+	cursor: pointer;
+	background-color: aquamarine;
+	outline: none;
+	user-select: none;
 }
 
-.compose-btn:hover{
-    box-shadow: 0px 1px 3px 0px cyan;
+.compose-btn:hover {
+	box-shadow: 0px 1px 3px 0px cyan;
+}
+
+.compose-btn-con {
+	height: 40%;
+	flex-flow: row-reverse;
+	position: absolute;
+	width: 100%;
+	bottom: 8px;
+	left: 85%;
 }
