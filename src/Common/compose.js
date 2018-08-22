@@ -37,6 +37,7 @@ class Compose extends React.Component {
 					onChange={e => {
 						this.updateState(e);
 					}}
+					placeholder="Type something ..."
 				/>
 				<div className="compose-btn-con">
 					<button

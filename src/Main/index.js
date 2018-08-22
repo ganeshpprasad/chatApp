@@ -5,6 +5,7 @@ import { NavTab } from 'react-router-tabs';
 import ChatView from '../Common/chatView';
 import Account from '../Menu/Account/account';
 import Topbar from './topbar.js';
+import Sidebar from './sidebar.js';
 
 class Main extends React.Component {
 	constructor(props) {
@@ -23,6 +24,7 @@ class Main extends React.Component {
 				<div className="main-con">
 					<Topbar />
 					<div className="app-con">
+						<Sidebar />
 						<Switch>
 							<Route path={`/account`} component={Account} />
 							<Route

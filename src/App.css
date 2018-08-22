@@ -1,28 +1,62 @@
 .main-con {
-	height: 100vh;
-	width: 70vw;
+	height: 98vh;
+	width: 100vw;
 	background-color: #f7fffe;
 	display: flex;
 	flex-direction: column;
-	margin: 0 auto;
+}
+
+.company {
+	display: flex;
+	text-decoration: none;
+}
+
+.company svg {
+	width: 24px;
+	height: 24px;
+	height: 48px;
+	margin-left: 1rem;
+}
+
+.company div {
+	margin: auto;
+	margin-left: 1rem;
+	text-decoration: none;
+	color: #555;
 }
 
 .app-con {
-	height: 90%;
-	width: 90%;
+	height: 95%;
+	width: 100%;
 	box-sizing: border-box;
 	margin: 0 auto;
+	display: flex;
 }
 
 .chat-con {
 	height: 100%;
-	width: 100%;
+	flex-grow: 7;
+}
+
+.sidebar .nav-tab svg {
+	margin-right: 1rem;
+}
+
+.sidebar {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.8rem;
+	background-color: rgb(49, 48, 72);
+	text-transform: uppercase;
+	padding-top: 2rem;
+	color: #ddd;
 }
 
 .chat-view {
 	margin: 0 auto;
 	background-color: rgba(174, 207, 201, 0.2);
-	height: 89%;
+	height: 81%;
 	padding: 0.5rem;
 	overflow: auto;
 }
@@ -32,9 +66,15 @@
 	display: none;
 }
 
+.msg-actions .msg-action {
+	cursor: pointer;
+}
+
 .topbar-con {
-	margin: 1rem;
 	display: flex;
+	margin-bottom: 0;
+	height: 48px;
+	background-color: rgba(49, 48, 72, 0.2);
 }
 
 .hamburger {
@@ -42,7 +82,7 @@
 	align-items: center;
 	width: 64px;
 	height: 32px;
-	background-color: aquamarine;
+	background-color: #eee;
 	outline: none;
 	border: none;
 	cursor: pointer;
@@ -56,23 +96,38 @@
 	display: flex;
 	align-items: center;
 	flex-grow: 1;
-	background-color: aquamarine;
+	justify-content: flex-end;
 }
 
 .nav-con-base {
-	width: 60%;
-	margin: auto;
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-end;
+	align-items: center;
+	margin-right: 3rem;
+}
+
+.nav-con-base a img {
+	border: 2px solid rgb(5, 142, 196);
+}
+
+.insp {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 2rem;
+}
+
+.nav-con-base .notifs svg {
+	width: 22px;
+	height: 48px;
+	margin-left: 1rem;
 }
 
 .nav-tab {
-	color: #555;
 	text-decoration: none;
+	margin: 1rem;
+	color: #ddd;
 }
 
 .nav-tab:hover {
-	color: #ff04b9;
 }
 
 .compose-box {
@@ -85,22 +140,36 @@
 	min-height: 48px;
 	border: 1px solid #ccc;
 	padding: 1rem;
-	width: 80%;
+	width: 60%;
 	margin: 1rem auto;
+	color: #555;
 }
 
 .msg-item .message {
-	margin: 1rem;
+	margin: 2rem 1rem;
+	font-size: 0.9rem;
+	display: block;
+	margin-right: 2rem;
+}
+
+.msg-item .user {
+	display: flex;
+	align-items: center;
 }
 
 .msg-item .user-con {
 	display: flex;
-	align-items: center;
+	justify-content: space-between;
+}
+
+.msg-item .time {
+	font-size: 0.5rem;
 }
 
 .msg-item .username {
 	font-size: 0.8rem;
 	margin-left: 0.5rem;
+	color: #777;
 }
 
 .msg-item .msg-actions-con {
@@ -117,27 +186,49 @@
 
 .msg-item .avatar {
 	display: inline-block;
-	width: 24px;
-	height: 24px;
+	width: 32px;
+	height: 32px;
 	background-color: #a54;
 	border-radius: 50%;
 	text-align: center;
 }
 
-.msg-item span:nth-child(2) {
-	display: block;
-	margin-right: 2rem;
+.avatar img {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
 }
 
 .msg-item + .msg-item {
 	margin-top: 1rem;
 }
 
+.anon-msg {
+	font-size: 0.7rem;
+	margin: auto;
+}
+
 .account-con {
 	top: 1px;
-	background-color: #ede;
 	margin: 0 auto;
 	height: 50%;
+	flex-grow: 7;
+}
+
+.account-pic {
+	display: flex;
+	justify-content: space-around;
+}
+
+.acc-pic-con {
+	display: flex;
+	flex-direction: column;
+}
+
+.prof-pic {
+	text-align: center;
+	font-size: 0.7rem;
+	color: cornflowerblue;
 }
 
 .account-con h3 {
@@ -159,15 +250,17 @@
 .compose-con {
 	height: 10%;
 	margin-bottom: 1rem;
-	width: 80%;
-	margin: 0 auto;
+	width: 50%;
+	margin: 2rem auto;
 	position: relative;
+	background-color: rgba(213, 233, 255, 0.52);
+	border-radius: 4%;
 }
 
 .compose-area {
 	width: 100%;
 	border: none;
-	height: 90%;
+	height: 100%;
 	font-size: 0.8rem;
 	outline: none;
 	vertical-align: middle;
@@ -182,9 +275,10 @@
 	padding: 0;
 	width: 15%;
 	cursor: pointer;
-	background-color: aquamarine;
+	background-color: rgb(5, 142, 196);
 	outline: none;
 	user-select: none;
+	color: #ddd;
 }
 
 .compose-btn:hover {
@@ -196,6 +290,6 @@
 	flex-flow: row-reverse;
 	position: absolute;
 	width: 100%;
-	bottom: 8px;
+	bottom: 0px;
 	left: 85%;
 }

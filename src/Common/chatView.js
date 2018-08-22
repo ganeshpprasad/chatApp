@@ -43,6 +43,10 @@ class ChatView extends React.Component {
 					message={item.message}
 					key={index}
 					author={item.author}
+					dp={item.dp_url}
+					like={item.likes}
+					comments={item.comments}
+					views={item.views}
 				/>
 			);
 		});
@@ -51,6 +55,10 @@ class ChatView extends React.Component {
 
 	addItemToChatList(item) {
 		console.log('item', item);
+		item['dp_url'] = 'ac';
+		item['likes'] = 0;
+		item['comments'] = 0;
+		item['views'] = 0;
 		let _items = this.state.chatList;
 		if (!item) {
 			return;
